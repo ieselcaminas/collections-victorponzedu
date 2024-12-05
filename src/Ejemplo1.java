@@ -4,6 +4,10 @@ import java.util.Collections;
 
 public class Ejemplo1 {
     public static void main(String[] args) {
+        String boleto = "95052";
+        Character ultimo = boleto.charAt(4);
+        Integer numero = Integer.parseInt("" + ultimo);
+
         /*String[] array = {"uno", "dos", "tres"};
         // Convertir el array a una lista
         ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(array));
