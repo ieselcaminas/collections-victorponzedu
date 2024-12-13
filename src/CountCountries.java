@@ -16,13 +16,14 @@ public class CountCountries {
             campos = line.split(",");
             pais = campos[6];
 
-            cuantos = map.get(pais);
+            //cuantos = map.getOrDefault(pais, 0);
             //Una forma más corta de hacerlo
             map.put(pais, map.getOrDefault(pais, 0) + 1);
-//            if (cuantos == null )
-//                map.put(pais, 1);
-//            else
-//                map.put(pais, cuantos + 1);
+            /*if (cuantos == null )
+                map.put(pais, 1);
+            else
+                map.put(pais, cuantos + 1);*/
+
         }
 
         reader.close();

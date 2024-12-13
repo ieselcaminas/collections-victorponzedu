@@ -10,10 +10,11 @@ public class Frequency {
         Integer cont;
         for (String palabra : palabras){
             cont = frequency.get(palabra);
-            if (cont == null)
-                frequency.put(palabra, 1);
-            else
-                frequency.put(palabra, cont + 1);
+            frequency.put(palabra, frequency.getOrDefault(palabra, 0) + 1);
+//            if (cont == null)
+//                frequency.put(palabra, 1);
+//            else
+//                frequency.put(palabra, cont + 1);
         }
 
         return frequency;

@@ -2,42 +2,52 @@ import java.util.LinkedList;
 import java.util.Stack;
 
 public class Parentesis {
-
+    public static void main(String[] args) {
+        System.out.println(esBalanceado("}()"));
+    }
     public static boolean esBalanceado(String cadena){
         boolean balanced;
-        Stack<Character> cola = new Stack<>();
-        char c;
+        char caracter;
+        char ultimo;
 
+        Stack<Character> pila = new Stack<>();
         for (int i = 0; i < cadena.length(); i++) {
-            c = cadena.charAt(i);
-            if (c == '{' || c == '[' || c == '(') {
-                cola.push(c);
-            }
-            else if (c == ']' || c == '}' || c == ')') {
-                if (cola.isEmpty()) {
+            //Si son de apertura, lo pongo en la pila
+            caracter = cadena.charAt(i);
+            if (caracter == '(' || caracter == '{' || caracter == '['){
+                pila.push(caracter);
+            } else if (caracter == ')') {
+                if (pila.isEmpty()){
                     return false;
                 }
-                else {
-                    Character removed = cola.pop();
-                    switch (c) {
-                        case '}':
-                            balanced = removed == '{';
-                            break;
-                        case ')':
-                            balanced = removed == '(';
-                            break;
-                        case ']':
-                            balanced = removed == '[';
-                            break;
-                        default:
-                            balanced = false;
-                    }
-                    if (!balanced)
-                        return false;
+                ultimo = pila.pop();
+                //Saco de la pila y compruebo si es '('. Si no es, acabo con false
+                if (ultimo != '('){
+                    return false;
+                }
+            } else if (caracter == '}') {
+                if (pila.isEmpty()){
+                    return false;
+                }
+                ultimo = pila.pop();
+                //Saco de la pila y compruebo si es '{'. Si no es, acabo con false
+                if (ultimo != '{'){
+                    return false;
+                }
+            }else if (caracter == ']') {
+                if (pila.isEmpty()){
+                    return false;
+                }
+                ultimo = pila.pop();
+                //Saco de la pila y compruebo si es '['. Si no es, acabo con false
+                if (ultimo != '['){
+                    return false;
                 }
             }
         }
-        return cola.isEmpty();
+
+        return pila.isEmpty();
+
     }
 
 }

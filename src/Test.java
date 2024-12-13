@@ -49,11 +49,17 @@ class Test
 	{
 		Stack<Integer> stack = new Stack<Integer>();
 
-		stack_push(stack);
-		stack_pop(stack);
-		stack_push(stack);
-		stack_peek(stack);
-		stack_search(stack, 2);
-		stack_search(stack, 6);
+//		stack_push(stack);
+//		stack_pop(stack);
+//		stack_push(stack);
+//		stack_peek(stack);
+//		stack_search(stack, 2);
+//		stack_search(stack, 6);
+//
+		stack.push(5);
+		stack.push(6);
+		Integer dato = stack.peek();
+		dato = stack.pop();
+
 	}
 }

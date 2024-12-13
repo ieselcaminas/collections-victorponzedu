@@ -16,16 +16,22 @@ public class Anagramas {
 		Map<String, ArrayList<String>> mapaAnagramas = new HashMap<>();
 
 		while ((palabraDesordenada = reader.readLine())!=null) {
-			//Trabajar con line
+			//Obtenemos la palabra ordenada
 			palabraOrdenada = alphabetize(palabraDesordenada);
+			//Y comprobamos si está en el mapa (nos devolverá un ArrayList o null)
 			listaDesordenadas = mapaAnagramas.get(palabraOrdenada);
 
 			if (listaDesordenadas == null){
+				//Si no está, creamos una lista vacía
 				listaDesordenadas = new ArrayList<>();
+				//Le añadimos la palabra
 				listaDesordenadas.add(palabraDesordenada);
+				//Y añadimos el anagrama junto a su lista
 				mapaAnagramas.put(palabraOrdenada, listaDesordenadas);
 			}else{
+				//Añadimos la palabra a la lista
 				listaDesordenadas.add(palabraDesordenada);
+				// Y añadimos al mapa
 				mapaAnagramas.put(palabraOrdenada, listaDesordenadas);
 			}
 
