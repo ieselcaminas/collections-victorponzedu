@@ -34,6 +34,10 @@ public class Human implements Comparable<Human>{
         return Double.compare(this.getSalary(), other.getSalary());
         //y esto sería de mayor a menor
         //return Double.compare(other.getSalary(), this.getSalary());
+        /*
+         Y en este caso, si tienen el mismo nombre, los ordenamos por salario de menor
+         a mayor
+         */
         /*if (this.name.equals(other.getName())){
             return Double.compare(this.getSalary(), other.getSalary());
         }else{
