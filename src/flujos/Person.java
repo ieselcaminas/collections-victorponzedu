@@ -1,6 +1,6 @@
 package flujos;
 
-public class Person {
+public class Person implements Comparable<Person>{
     private String firstName;
     private String lastName;
     private int birthYear;
@@ -21,5 +21,17 @@ public class Person {
 
     public int getBirthYear() {
         return this.birthYear;
+
     }
+
+    @Override
+    public int compareTo(Person other){
+        return this.lastName.compareTo(other.getLastName());
+    }
+
+    @Override
+    public String toString(){
+        return this.firstName + " " + this.lastName;
+    }
+
 }

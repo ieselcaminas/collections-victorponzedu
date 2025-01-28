@@ -16,14 +16,16 @@ public class Botin {
         for (int i = 0; i < billetes.length; i++) {
             billete = billetes[i];
             //Para que sea un reparto circular (que vuelva a 0 una vez alcanzado numLadrones
+            //Por eso hace falta un for: porque se usa la variable contador i
             leTocaA = i % numLadrones;
             botin = reparto.get(leTocaA);
             if (botin == null){
-                reparto.put(leTocaA, billetes[i]);
+                reparto.put(leTocaA, billete);
             }else{
                 reparto.put(leTocaA, botin + " " + billete);
             }
-            reparto.put(leTocaA, reparto.getOrDefault(leTocaA, billete) + " " + billete);
+            //O también así
+            //reparto.put(leTocaA, reparto.getOrDefault(leTocaA, billete) + " " + billete);
 
         }
         return reparto;

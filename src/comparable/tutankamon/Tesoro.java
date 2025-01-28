@@ -52,12 +52,15 @@ public class Tesoro implements Comparable<Tesoro>{
 
     @Override
     public int compareTo(Tesoro other){
+        //En el caso que el valor sea distinto, se ordena de mayor a menor
         if (this.valor != other.valor){
             return other.valor - this.valor;
         }else{
+            //En caso de empate en el valor se ordena de menor a mayor peso
             if (this.peso != other.peso){
                 return this.peso - other.peso;
             }else{
+                //Y, por último, cuando todo es igual se ordena por en número de orden de menor a mayor
                 return this.orden - other.orden;
             }
         }

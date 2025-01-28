@@ -13,7 +13,7 @@ public class Problema2 {
         personas.add(p);
 
         long cuantas = personas.stream()
-                //En este caso filtramos por las que empiezan por >
+                //En este caso filtramos por las que empiezan por A
                 .filter(persona -> persona.getLastName().startsWith("A"))
                 //las contamos
                 .count();

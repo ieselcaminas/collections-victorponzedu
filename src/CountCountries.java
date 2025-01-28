@@ -4,6 +4,7 @@ import java.util.*;
 public class CountCountries {
 
     public static Map<String, Integer> countCountries() throws IOException{
+        //No entra para el examen
         Map<String, Integer> map = new HashMap<String, Integer>();
 
         BufferedReader reader = new BufferedReader(new FileReader("files/Colfuturo-Seleccionados.csv"));
@@ -23,8 +24,6 @@ public class CountCountries {
                 map.put(pais, cuantos + 1);
             //Una forma más corta de hacerlo
             //map.put(pais, map.getOrDefault(pais, 0) + 1);
-
-
         }
 
         reader.close();

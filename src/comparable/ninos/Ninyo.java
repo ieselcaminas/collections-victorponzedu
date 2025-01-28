@@ -32,10 +32,11 @@ public class Ninyo implements Comparable<Ninyo>{
 
     @Override
     public int compareTo(Ninyo other){
+        //Se ordena por bondad de mayor a menor y si es igual, ordenamos por los regalos de menor a mayor
         if (this.bondad == other.bondad){
             return this.regalos - other.regalos;
         }else{
-            return this.bondad - other.bondad;
+            return other.bondad - this.bondad;
         }
     }
 }

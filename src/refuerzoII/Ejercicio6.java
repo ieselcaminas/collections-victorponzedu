@@ -9,6 +9,16 @@ public class Ejercicio6 {
     public static boolean esHyperpar(int numero){
         int numeroIesimo;
         while (numero > 0){
+            /*
+            Por ejemplo:
+                129 % 10 = 9
+                129 / 10 = 12
+                ....
+                12 % 10 = 2;
+                12 / 10 = 1
+             */
+            //Al hacer el módulo, nos queda justo el resto de la división. Es decir
+            //un número entre 0 y 9
             //Nos quedamos con el último dígito
             numeroIesimo = numero % 10;
             //Nos quedamos con el resto de dígitos

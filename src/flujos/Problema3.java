@@ -11,11 +11,17 @@ public class Problema3 {
 
         p = new Person("María", "García", 1985);
         personas.add(p);
+
+        p = new Person("Juan", "García", 1985);
+        personas.add(p);
+
+
+
         personas.stream()
                 //Mapeamos el apellido porque es sobre el que quiero contar los distintos
-                .map(persona -> persona.getLastName())
+                //.map(persona -> persona.getLastName())
                 //también se puede hacer como
-                //.map(Person::getLastName)
+                .map(Person::getLastName)
                 //A partir de ahora, se trabaja con el atributo firstName
                 //Sacamos los distintos apellidos
                 .distinct()

@@ -2,7 +2,7 @@ import java.util.Stack;
 
 public class ExpresionesAritmeticas {
     public static void main(String[] args) {
-        System.out.println(calculo("6"));
+        System.out.println(calculo("5 1 2 + 4 * + 3 -"));
     }
     public static boolean esNumero(String cadena){
         return Character.isDigit(cadena.charAt(0));
@@ -16,7 +16,8 @@ public class ExpresionesAritmeticas {
 
         for (int i = 0; i < terminos.length; i++) {
             if (esNumero(terminos[i])){
-                numero = Integer.parseInt("" + terminos[i]);
+                numero = Integer.valueOf(terminos[i]);
+                //numero = Integer.toString("" + terminos[i]);
                 pila.push(numero);
             }else{
                 n2 = pila.pop();

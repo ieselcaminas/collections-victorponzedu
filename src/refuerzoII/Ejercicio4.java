@@ -11,8 +11,16 @@ public class Ejercicio4 {
         int moda = 0;
         int max = 0;
         Map<Integer, Integer> mapa = new HashMap<>();
+        Integer valor;
         for (int i = 0; i < numeros.length; i++) {
-            mapa.put(numeros[i], mapa.getOrDefault(numeros[i], 0) + 1);
+            valor = mapa.get(numeros[i]);
+            if (valor == null){
+                mapa.put(numeros[i], 1);
+            }else{
+                mapa.put(numeros[i], valor + 1);
+            }
+            //mapa.put(numeros[i], mapa.getOrDefault(numeros[i], 0) + 1);
+
         }
         /**
          * Otra forma mejor con un for avanzado

@@ -33,15 +33,5 @@ public class Person  implements Comparable<Person> {
         // O así
         // return Integer.compare(other.getBirthYear(), this.birthYear);
 
-        /*//Si mi altura es igual a la del otro, devuelve 0. Por tanto, no se toca
-        if (this.getLastName().compareTo(other.getLastName())==0) {
-            return 0;
-        } else if (this.getLastName().compareTo(other.getLastName()) > 0) {
-            //Si mi altura es mayor, pasa adelante
-            return 1;
-        } else {
-            //Si mi altura es menor, pasa atrás
-            return -1;
-        }*/
     }
 }

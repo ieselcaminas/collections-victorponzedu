@@ -30,6 +30,7 @@ public class Pais implements Comparable<Pais>{
     }
     @Override
     public int compareTo(Pais other){
-        return other.analfabetos - this.getAnalfabetos();
+        //Queremos ordenar de mayor a menor, por eso primero va other
+        return other.analfabetos - this.analfabetos;
     }
 }

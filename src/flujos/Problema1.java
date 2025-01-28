@@ -13,7 +13,9 @@ public class Problema1 {
         personas.add(p);
 
         long cuantas = personas.stream()
+                //Filtramos aquellas que hayan nacido antes de 1970
                 .filter(persona -> persona.getBirthYear() < 1970)
+                //Y las contamos
                 .count();
 
         System.out.println(cuantas);

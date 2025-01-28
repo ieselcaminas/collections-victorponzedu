@@ -17,6 +17,8 @@ public class Parentesis {
             if (caracter == '(' || caracter == '{' || caracter == '['){
                 pila.push(caracter);
             } else if (caracter == ')') {
+                //Si por ejemplo si tenemos ()), cuando coja eñ segundo ), la pila estará vacía y cascará si
+                //no lo compruebo
                 if (pila.isEmpty()){
                     return false;
                 }

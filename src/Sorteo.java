@@ -12,7 +12,7 @@ public class Sorteo {
 
         for(String boleto: boletos){
             //Valor de la terminación
-            ultimo = Integer.parseInt("" + boleto.charAt(boleto.length() - 1));
+            ultimo = Integer.parseInt("" + boleto.charAt(4));
             //Obtenemos el valor del valor
             cont = terminaciones.get(ultimo);
             //Si la clave no existía, ponemos un 1. Si no, aumentamos en 1 el valor

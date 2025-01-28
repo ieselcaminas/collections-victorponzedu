@@ -6,9 +6,10 @@ public class Anagramas {
 
 
 		Map<String, ArrayList<String>> mapa = generarMapa();
-
+		//Habría ahora que imprimir los datos...
     }
 	public static Map<String, ArrayList<String>> generarMapa()throws IOException{
+		//No va para examen
 		BufferedReader reader = new BufferedReader(new FileReader("files/spanish-dict.txt"));
 		String palabraDesordenada;
 		String palabraOrdenada;

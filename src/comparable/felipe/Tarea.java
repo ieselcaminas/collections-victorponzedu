@@ -32,6 +32,7 @@ public class Tarea implements Comparable<Tarea> {
 
     @Override
     public int compareTo(Tarea other){
+        //Se ordena por prioridad de menor a mayor y en caso de empate por duración también de menor a mayor
         if (this.prioridad - other.prioridad == 0)
             return this.duracion - other.duracion;
         else

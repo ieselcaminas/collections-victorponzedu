@@ -16,10 +16,10 @@ public class Main {
         t = new Tesoro(3, "Sarcófago", 1000, 1000);
         tesoros.add(t);
 
-        t = new Tesoro(3, "Máscara", 1000, 10);
+        t = new Tesoro(4, "Máscara", 1000, 10);
         tesoros.add(t);
 
-        t = new Tesoro(3, "Arco", 10, 2);
+        t = new Tesoro(5, "Arco", 10, 2);
         tesoros.add(t);
 
         tesoros.stream().sorted().forEach(System.out::println);

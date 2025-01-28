@@ -14,6 +14,7 @@ public class Problema4 {
         numeros.add(8);
 
         numeros.stream()
+                //Filtramos los que son  mayor o igual a 1 y menor o igual a 5
                 .filter(n -> n >=1 && n <=5)
                 .forEach(System.out::println);
                 //O así
