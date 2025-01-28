@@ -13,6 +13,7 @@ public class Ejercicio5 {
         Arrays.sort(numeros);
         //Si hay un número par de números, cogemos los dos centrales
         if (numeros.length % 2 == 0){
+            //Y sacamos la media (que coincidirá con la mediana) de esos dos números
             double a = (double)numeros[numeros.length / 2];
             double b = (double)numeros[numeros.length / 2 - 1];
             mediana = (a + b)/ 2;
